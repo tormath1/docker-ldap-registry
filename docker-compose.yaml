@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+
+  httpd:
+    image: httpd:2.4.29-alpine
+    hostname: httpd
+    container_name: httpd
+    ports:
+      - "443:443"
+    volumes:
+      - "./conf:/usr/local/apache2/conf"
+      - "./conf/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro"
+      - "./certs:/etc/ssl/certs.d/registry.local.tld"
+    restart: always
+    environment:
+      - LDAP_URL="ldap://<ldap-url>:<ldap-port>/dc=company...?sAMAccountName?sub?(objectClass=user)"
+      - BIND_DN=toto
+      - BIND_PASSWORD=a_password
+
+  registry:
+    image: registry:2.6.2
+    restart: always
+    container_name: registry
+    hostname: registry
+    environment:
+      - REGISTRY_HTTP_ADDR=0.0.0.0:5000
+
+networks:
+  default:
+    external: 
+      name: "lab-network"
