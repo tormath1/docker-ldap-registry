@@ -112,3 +112,9 @@ $ docker pull registry.domain.tld/star-wars:ep5-the-best
 But you need to be in `pusher` LDAP group in order to push images. (Especially for CI like GitLab or Jenkins (lmao))
 
 As registry admin, you'll have to backup registry volumes on persistent disk. Everything you need is in Docker official documentation.
+
+
+##### Sources
+
+[Apache Module mod_authnz_ldap](https://httpd.apache.org/docs/2.4/mod/mod_authnz_ldap.html)
+[Docker Registry with Authentication](https://docs.docker.com/registry/recipes/apache/#setting-things-up)
