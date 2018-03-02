@@ -66,6 +66,14 @@ Your LDAP url must define your LDAP architecture. A quick Google search will sho
 
 You also need to update your `ServerName` in `conf/extra/httpd-vhosts.conf`
 
+##### Create your Docker network
+
+As you can see, a `lab-network` is used in `docker-compose.yaml` configuration. You can edit the name, but you need to create this network:
+
+```shell
+$ docker network create lab-network --driver bridge
+```
+
 ##### FIRE UP 
 
 Thanks to docker, you only need a few commands in order to run your Docker registry:
