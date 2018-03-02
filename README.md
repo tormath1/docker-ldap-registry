@@ -5,8 +5,8 @@
 First, you need to clone this repo where the registry will be deployed:
 
 ```shell
-$ git clone git@github.com:optelgroup/optel-registry.git
-$ cd optel-registry/
+$ git clone git@github.com:tormath1/docker-ldap-registry.git
+$ cd docker-ldap-registry/
 ```
 
 Please check that `docker` and `docker-compose` are installed on your server:
