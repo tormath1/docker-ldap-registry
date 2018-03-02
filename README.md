@@ -1,4 +1,4 @@
-## Optel Docker Registry with LDAP Authentication
+## Docker Registry with LDAP Authentication
 
 ##### Getting started
 
