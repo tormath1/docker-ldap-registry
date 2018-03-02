@@ -126,3 +126,8 @@ As registry admin, you'll have to backup registry volumes on persistent disk. Ev
 
 [Apache Module mod_authnz_ldap](https://httpd.apache.org/docs/2.4/mod/mod_authnz_ldap.html)
 [Docker Registry with Authentication](https://docs.docker.com/registry/recipes/apache/#setting-things-up)
+
+##### License
+
+[MIT](LICENSE.md) © [Mathieu Tortuyaux](https://mathieu-tortuyaux.fr/)
+
